@@ -175,6 +175,7 @@ class SymbolOfPeace(commands.Cog):
 
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("/"))
+bot.add_cog(SymbolOfPeace(bot))
 
 
 @bot.event
@@ -182,5 +183,5 @@ async def on_ready():
     print(f"Logged in as {bot.user.name}")
 
 
-bot.add_cog(SymbolOfPeace(bot))
-bot.run(DISCORD_TOKEN)
+if __name__ == "__main__":
+    bot.run(DISCORD_TOKEN)
