@@ -67,7 +67,7 @@ def get_gif(searchTerm):
     return data['results'][0]['media'][0]['gif']['url']
 
 
-class Music(commands.Cog):
+class SymbolOfPeace(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self._times = [0.75, 0.5, 1.0]
@@ -182,5 +182,5 @@ async def on_ready():
     print(f"Logged in as {bot.user.name}")
 
 
-bot.add_cog(Music(bot))
+bot.add_cog(SymbolOfPeace(bot))
 bot.run(DISCORD_TOKEN)
