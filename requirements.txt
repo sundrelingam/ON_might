@@ -10,6 +10,7 @@ multidict==5.1.0
 pip==21.1.2
 pycparser==2.20
 python-dotenv==0.17.1
+PyNaCl==1.4.0
 requests==2.25.1
 setuptools==57.0.0
 six==1.16.0
