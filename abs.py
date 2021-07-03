@@ -1,4 +1,4 @@
-"""
+    """
 Add bot to server with this URL:
 https://discordapp.com/oauth2/authorize?&client_id=852920228190879816&scope=bot&permissions=2164800
 """
@@ -89,7 +89,8 @@ class SymbolOfPeace(commands.Cog):
                            'Frog Crunch',
                            'Black Widow Plank',
                            'Thread the Needle',
-                           'Russian Twists']
+                           'Russian Twists',
+                           'Side to Side Kick-through']
 
     @commands.command()
     async def join(self, ctx, *, channel: discord.VoiceChannel):
