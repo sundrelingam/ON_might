@@ -1,4 +1,4 @@
-    """
+"""
 Add bot to server with this URL:
 https://discordapp.com/oauth2/authorize?&client_id=852920228190879816&scope=bot&permissions=2164800
 """
