@@ -119,7 +119,6 @@ class SymbolOfPeace(commands.Cog):
 
         # begin abs.exe
         time_remaining = 7
-        await ctx.send(time_remaining)
 
         while time_remaining > 3.5:
             t = random.choices(self._times, self._weights)[0] * 60
