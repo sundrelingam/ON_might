@@ -70,6 +70,18 @@ def get_gif(searchTerm):
 class SymbolOfPeace(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command()
+    async def join(self, ctx, *, channel: discord.VoiceChannel):
+        """Joins a voice channel"""
+
+        if ctx.voice_client is not None:
+            return await ctx.voice_client.move_to(channel)
+
+        await channel.connect()
+
+    @commands.command()
+    async def gobeyond(self, ctx, *, url="https://www.youtube.com/watch?v=lsHCzboWK0U"):
         self._times = [0.75, 0.5, 1.0]
         self._weights = [0.45, 0.45, 0.1]
         self._exercises = ['KTE Crunch',
@@ -93,18 +105,6 @@ class SymbolOfPeace(commands.Cog):
                            'Side to Side Kick-through',
                            'V-Tuck',
                            'Super Athletic V-Tuck Extraordinaire']
-
-    @commands.command()
-    async def join(self, ctx, *, channel: discord.VoiceChannel):
-        """Joins a voice channel"""
-
-        if ctx.voice_client is not None:
-            return await ctx.voice_client.move_to(channel)
-
-        await channel.connect()
-
-    @commands.command()
-    async def gobeyond(self, ctx, *, url="https://www.youtube.com/watch?v=lsHCzboWK0U"):
 
         # you say run
         async with ctx.typing():
